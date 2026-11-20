@@ -1,0 +1,23 @@
+{
+  "name": "048-proyecto--recuperacion-paolo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:list": "playwright test --list",
+    "test:headed": "playwright test --headed",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:regression": "playwright test --grep @regression",
+    "test:defectos": "playwright test --grep @defecto",
+    "report": "playwright show-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.65.1",
+    "typescript": "^7.0.2"
+  }
+}
