@@ -1,0 +1,27 @@
+﻿
+> 048-proyecto--recuperacion-paolo@1.0.0 test:smoke
+> playwright test --grep @smoke
+
+
+Running 18 tests using 2 workers
+
+  ok  2 [chromium] › tests\cart.spec.ts:10:3 › RF3 - Carrito de compras › Dos productos muestran Remove y insignia 2 @smoke @regression (5.3s)
+  ok  1 [chromium] › tests\checkout.spec.ts:34:3 › RF4 - Compra completa › Resumen calcula subtotal, impuesto y total @smoke @regression (5.3s)
+  ok  4 [chromium] › tests\inventory.spec.ts:9:3 › RF2 - Catalogo y ordenamiento › Catalogo muestra seis productos completos @smoke @regression (3.7s)
+  ok  5 [chromium] › tests\login.spec.ts:10:3 › RF1 - Inicio y cierre de sesion › Inicio de sesion valido @smoke @regression (5.1s)
+  ok  3 [chromium] › tests\checkout.spec.ts:49:3 › RF4 - Compra completa › Finalizar compra adjunta evidencia y vuelve al catalogo @smoke @regression (9.8s)
+  ok  6 [chromium] › tests\login.spec.ts:49:3 › RF1 - Inicio y cierre de sesion › Cerrar sesion desde el menu @smoke @regression (5.3s)
+  ok  7 [firefox] › tests\cart.spec.ts:10:3 › RF3 - Carrito de compras › Dos productos muestran Remove y insignia 2 @smoke @regression (27.3s)
+  ok  8 [firefox] › tests\checkout.spec.ts:34:3 › RF4 - Compra completa › Resumen calcula subtotal, impuesto y total @smoke @regression (23.7s)
+  ok 10 [firefox] › tests\inventory.spec.ts:9:3 › RF2 - Catalogo y ordenamiento › Catalogo muestra seis productos completos @smoke @regression (7.7s)
+  ok  9 [firefox] › tests\checkout.spec.ts:49:3 › RF4 - Compra completa › Finalizar compra adjunta evidencia y vuelve al catalogo @smoke @regression (10.1s)
+  ok 11 [firefox] › tests\login.spec.ts:10:3 › RF1 - Inicio y cierre de sesion › Inicio de sesion valido @smoke @regression (4.8s)
+  ok 12 [firefox] › tests\login.spec.ts:49:3 › RF1 - Inicio y cierre de sesion › Cerrar sesion desde el menu @smoke @regression (4.5s)
+  ok 13 [webkit] › tests\cart.spec.ts:10:3 › RF3 - Carrito de compras › Dos productos muestran Remove y insignia 2 @smoke @regression (8.5s)
+  ok 14 [webkit] › tests\checkout.spec.ts:34:3 › RF4 - Compra completa › Resumen calcula subtotal, impuesto y total @smoke @regression (9.7s)
+  ok 16 [webkit] › tests\inventory.spec.ts:9:3 › RF2 - Catalogo y ordenamiento › Catalogo muestra seis productos completos @smoke @regression (4.9s)
+  ok 15 [webkit] › tests\checkout.spec.ts:49:3 › RF4 - Compra completa › Finalizar compra adjunta evidencia y vuelve al catalogo @smoke @regression (10.3s)
+  ok 17 [webkit] › tests\login.spec.ts:10:3 › RF1 - Inicio y cierre de sesion › Inicio de sesion valido @smoke @regression (4.8s)
+  ok 18 [webkit] › tests\login.spec.ts:49:3 › RF1 - Inicio y cierre de sesion › Cerrar sesion desde el menu @smoke @regression (4.6s)
+
+  18 passed (1.6m)

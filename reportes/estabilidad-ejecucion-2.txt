@@ -1,0 +1,77 @@
+﻿
+> 048-proyecto--recuperacion-paolo@1.0.0 test:smoke
+> playwright test --grep @smoke
+
+
+Running 18 tests using 2 workers
+
+  ok  1 [chromium] › tests\cart.spec.ts:10:3 › RF3 - Carrito de compras › Dos productos muestran Remove y insignia 2 @smoke @regression (2.8s)
+  ok  2 [chromium] › tests\checkout.spec.ts:34:3 › RF4 - Compra completa › Resumen calcula subtotal, impuesto y total @smoke @regression (3.0s)
+  ok  4 [chromium] › tests\inventory.spec.ts:9:3 › RF2 - Catalogo y ordenamiento › Catalogo muestra seis productos completos @smoke @regression (2.8s)
+  ok  3 [chromium] › tests\checkout.spec.ts:49:3 › RF4 - Compra completa › Finalizar compra adjunta evidencia y vuelve al catalogo @smoke @regression (3.2s)
+  ok  5 [chromium] › tests\login.spec.ts:10:3 › RF1 - Inicio y cierre de sesion › Inicio de sesion valido @smoke @regression (2.1s)
+  ok  6 [chromium] › tests\login.spec.ts:49:3 › RF1 - Inicio y cierre de sesion › Cerrar sesion desde el menu @smoke @regression (3.1s)
+  ok  7 [firefox] › tests\cart.spec.ts:10:3 › RF3 - Carrito de compras › Dos productos muestran Remove y insignia 2 @smoke @regression (21.3s)
+  ok  8 [firefox] › tests\checkout.spec.ts:34:3 › RF4 - Compra completa › Resumen calcula subtotal, impuesto y total @smoke @regression (19.9s)
+  ok 10 [firefox] › tests\inventory.spec.ts:9:3 › RF2 - Catalogo y ordenamiento › Catalogo muestra seis productos completos @smoke @regression (4.3s)
+  ok  9 [firefox] › tests\checkout.spec.ts:49:3 › RF4 - Compra completa › Finalizar compra adjunta evidencia y vuelve al catalogo @smoke @regression (7.2s)
+  ok 11 [firefox] › tests\login.spec.ts:10:3 › RF1 - Inicio y cierre de sesion › Inicio de sesion valido @smoke @regression (6.5s)
+  ok 12 [firefox] › tests\login.spec.ts:49:3 › RF1 - Inicio y cierre de sesion › Cerrar sesion desde el menu @smoke @regression (5.9s)
+  ok 13 [webkit] › tests\cart.spec.ts:10:3 › RF3 - Carrito de compras › Dos productos muestran Remove y insignia 2 @smoke @regression (7.4s)
+  ok 14 [webkit] › tests\checkout.spec.ts:34:3 › RF4 - Compra completa › Resumen calcula subtotal, impuesto y total @smoke @regression (7.8s)
+  ok 16 [webkit] › tests\inventory.spec.ts:9:3 › RF2 - Catalogo y ordenamiento › Catalogo muestra seis productos completos @smoke @regression (4.4s)
+  ok 17 [webkit] › tests\login.spec.ts:10:3 › RF1 - Inicio y cierre de sesion › Inicio de sesion valido @smoke @regression (3.4s)
+  ok 15 [webkit] › tests\checkout.spec.ts:49:3 › RF4 - Compra completa › Finalizar compra adjunta evidencia y vuelve al catalogo @smoke @regression (10.1s)
+  x  18 [webkit] › tests\login.spec.ts:49:3 › RF1 - Inicio y cierre de sesion › Cerrar sesion desde el menu @smoke @regression (17.5s)
+
+
+  1) [webkit] › tests\login.spec.ts:49:3 › RF1 - Inicio y cierre de sesion › Cerrar sesion desde el menu @smoke @regression 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator:  locator('.bm-menu-wrap')
+    Expected: visible
+    Received: hidden
+    Timeout:  10000ms
+
+    Call log:
+      - Expect "toBeVisible" locator('.bm-menu-wrap') with timeout 10000ms
+      - waiting for locator('.bm-menu-wrap')
+        22 × locator resolved to <div id="" hidden="true" aria-hidden="false" class="bm-menu-wrap">…</div>
+           - unexpected value "hidden"
+
+
+       at ..\pages\MenuPage.ts:34
+
+      32 |
+      33 |   async expectMenuVisible() {
+    > 34 |     await expect(this.menuSidebar).toBeVisible();
+         |                                    ^
+      35 |     await expect(this.logoutLink).toBeVisible();
+      36 |   }
+      37 |
+        at MenuPage.expectMenuVisible (C:\Users\libre\OneDrive\Imágenes\Escritorio\048-proyecto -recuperacion-paolo\pages\MenuPage.ts:34:36)
+        at MenuPage.logoutFlow (C:\Users\libre\OneDrive\Imágenes\Escritorio\048-proyecto -recuperacion-paolo\pages\MenuPage.ts:44:16)
+        at C:\Users\libre\OneDrive\Imágenes\Escritorio\048-proyecto -recuperacion-paolo\tests\login.spec.ts:55:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\login-RF1---Inicio-y-cierr-4c286-Cerrar-sesion-desde-el-menu-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results\login-RF1---Inicio-y-cierr-4c286-Cerrar-sesion-desde-el-menu-webkit\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\login-RF1---Inicio-y-cierr-4c286-Cerrar-sesion-desde-el-menu-webkit\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\login-RF1---Inicio-y-cierr-4c286-Cerrar-sesion-desde-el-menu-webkit\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\login-RF1---Inicio-y-cierr-4c286-Cerrar-sesion-desde-el-menu-webkit\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [webkit] › tests\login.spec.ts:49:3 › RF1 - Inicio y cierre de sesion › Cerrar sesion desde el menu @smoke @regression 
+  17 passed (1.6m)

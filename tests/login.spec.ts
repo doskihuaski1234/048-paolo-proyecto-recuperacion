@@ -48,12 +48,11 @@ test.describe('RF1 - Inicio y cierre de sesion', () => {
 
   test('Cerrar sesion desde el menu', {
     tag: ['@smoke', '@regression'],
-  }, async ({ page, loginPage, inventoryPage }) => {
+  }, async ({ loginPage, inventoryPage, menuPage }) => {
     await loginPage.login(users.standard.username, users.standard.password);
     await inventoryPage.expectToBeOnInventoryPage();
-    await page.getByRole('button', { name: 'Open Menu' }).click();
-    await page.locator('[data-test="logout-sidebar-link"]').click();
-    await expect(page).toHaveURL(/\/$/);
+    await expect(inventoryPage.inventoryItems).toHaveCount(6);
+    await menuPage.logoutFlow();
     await expect(loginPage.usernameInput).toHaveValue('');
   });
 });

@@ -44,6 +44,6 @@ export class MenuPage {
     await this.expectMenuVisible();
     await this.logout();
 
-    await expect(this.page).toHaveURL('https://www.saucedemo.com/');
+    await expect(this.page).toHaveURL(/\/$/);
   }
 }

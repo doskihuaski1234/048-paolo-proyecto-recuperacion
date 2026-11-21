@@ -1,0 +1,67 @@
+﻿
+> 048-proyecto--recuperacion-paolo@1.0.0 test:smoke
+> playwright test --grep @smoke
+
+
+Running 18 tests using 2 workers
+
+  ok  2 [chromium] › tests\checkout.spec.ts:34:3 › RF4 - Compra completa › Resumen calcula subtotal, impuesto y total @smoke @regression (13.8s)
+  ok  1 [chromium] › tests\cart.spec.ts:10:3 › RF3 - Carrito de compras › Dos productos muestran Remove y insignia 2 @smoke @regression (13.6s)
+  ok  4 [chromium] › tests\inventory.spec.ts:9:3 › RF2 - Catalogo y ordenamiento › Catalogo muestra seis productos completos @smoke @regression (11.0s)
+  ok  3 [chromium] › tests\checkout.spec.ts:49:3 › RF4 - Compra completa › Finalizar compra adjunta evidencia y vuelve al catalogo @smoke @regression (20.1s)
+  ok  5 [chromium] › tests\login.spec.ts:10:3 › RF1 - Inicio y cierre de sesion › Inicio de sesion valido @smoke @regression (8.2s)
+  ok  6 [chromium] › tests\login.spec.ts:49:3 › RF1 - Inicio y cierre de sesion › Cerrar sesion desde el menu @smoke @regression (8.6s)
+  x   8 [firefox] › tests\checkout.spec.ts:34:3 › RF4 - Compra completa › Resumen calcula subtotal, impuesto y total @smoke @regression (36.1s)
+  x   7 [firefox] › tests\cart.spec.ts:10:3 › RF3 - Carrito de compras › Dos productos muestran Remove y insignia 2 @smoke @regression (35.4s)
+  ok 10 [firefox] › tests\inventory.spec.ts:9:3 › RF2 - Catalogo y ordenamiento › Catalogo muestra seis productos completos @smoke @regression (15.6s)
+  ok  9 [firefox] › tests\checkout.spec.ts:49:3 › RF4 - Compra completa › Finalizar compra adjunta evidencia y vuelve al catalogo @smoke @regression (20.0s)
+  ok 11 [firefox] › tests\login.spec.ts:10:3 › RF1 - Inicio y cierre de sesion › Inicio de sesion valido @smoke @regression (4.6s)
+  ok 12 [firefox] › tests\login.spec.ts:49:3 › RF1 - Inicio y cierre de sesion › Cerrar sesion desde el menu @smoke @regression (4.2s)
+  ok 13 [webkit] › tests\cart.spec.ts:10:3 › RF3 - Carrito de compras › Dos productos muestran Remove y insignia 2 @smoke @regression (15.2s)
+  ok 14 [webkit] › tests\checkout.spec.ts:34:3 › RF4 - Compra completa › Resumen calcula subtotal, impuesto y total @smoke @regression (16.2s)
+  ok 16 [webkit] › tests\inventory.spec.ts:9:3 › RF2 - Catalogo y ordenamiento › Catalogo muestra seis productos completos @smoke @regression (7.0s)
+  ok 15 [webkit] › tests\checkout.spec.ts:49:3 › RF4 - Compra completa › Finalizar compra adjunta evidencia y vuelve al catalogo @smoke @regression (12.7s)
+  ok 17 [webkit] › tests\login.spec.ts:10:3 › RF1 - Inicio y cierre de sesion › Inicio de sesion valido @smoke @regression (4.9s)
+  ok 18 [webkit] › tests\login.spec.ts:49:3 › RF1 - Inicio y cierre de sesion › Cerrar sesion desde el menu @smoke @regression (5.4s)
+
+
+  1) [firefox] › tests\cart.spec.ts:10:3 › RF3 - Carrito de compras › Dos productos muestran Remove y insignia 2 @smoke @regression 
+
+    Error: browserContext.close: ENOSPC: no space left on device, open 'C:\Users\libre\OneDrive\Imágenes\Escritorio\048-proyecto -recuperacion-paolo\test-results\.playwright-artifacts-2\traces\1981448f0b79506fb670-b39fa98fc1ee8dc0827d-recording1.network'
+
+    Error: browserContext._wrapApiCall: ENOSPC: no space left on device, open 'C:\Users\libre\OneDrive\Imágenes\Escritorio\048-proyecto -recuperacion-paolo\test-results\.playwright-artifacts-2\traces\1981448f0b79506fb670-b39fa98fc1ee8dc0827d.network'
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\cart-RF3---Carrito-de-comp-5ca2e-uestran-Remove-y-insignia-2-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\cart-RF3---Carrito-de-comp-5ca2e-uestran-Remove-y-insignia-2-firefox\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\cart-RF3---Carrito-de-comp-5ca2e-uestran-Remove-y-insignia-2-firefox\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [firefox] › tests\checkout.spec.ts:34:3 › RF4 - Compra completa › Resumen calcula subtotal, impuesto y total @smoke @regression 
+
+    Error: browserContext.close: ENOSPC: no space left on device, open 'C:\Users\libre\OneDrive\Imágenes\Escritorio\048-proyecto -recuperacion-paolo\test-results\.playwright-artifacts-3\traces\25ab1bfc84c57e3e3a45-1e8e874b76732c264869-recording1.network'
+
+    Error: browserContext._wrapApiCall: ENOSPC: no space left on device, open 'C:\Users\libre\OneDrive\Imágenes\Escritorio\048-proyecto -recuperacion-paolo\test-results\.playwright-artifacts-3\traces\25ab1bfc84c57e3e3a45-1e8e874b76732c264869.network'
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\checkout-RF4---Compra-comp-76d64-a-subtotal-impuesto-y-total-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\checkout-RF4---Compra-comp-76d64-a-subtotal-impuesto-y-total-firefox\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\checkout-RF4---Compra-comp-76d64-a-subtotal-impuesto-y-total-firefox\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2 failed
+    [firefox] › tests\cart.spec.ts:10:3 › RF3 - Carrito de compras › Dos productos muestran Remove y insignia 2 @smoke @regression 
+    [firefox] › tests\checkout.spec.ts:34:3 › RF4 - Compra completa › Resumen calcula subtotal, impuesto y total @smoke @regression 
+  16 passed (3.1m)

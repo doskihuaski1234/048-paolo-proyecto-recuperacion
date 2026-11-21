@@ -3,6 +3,7 @@ import { LoginPage } from '../pages/LoginPage';
 import { InventoryPage } from '../pages/InventoryPage';
 import { CartPage } from '../pages/CartPage';
 import { CheckoutPage } from '../pages/CheckoutPage';
+import { MenuPage } from '../pages/MenuPage';
 import { users } from '../test-data/users';
 
 type Fixtures = {
@@ -10,6 +11,7 @@ type Fixtures = {
   inventoryPage: InventoryPage;
   cartPage: CartPage;
   checkoutPage: CheckoutPage;
+  menuPage: MenuPage;
   sesionEstandar: void;
 };
 
@@ -25,6 +27,9 @@ export const test = base.extend<Fixtures>({
   },
   checkoutPage: async ({ page }, use) => {
     await use(new CheckoutPage(page));
+  },
+  menuPage: async ({ page }, use) => {
+    await use(new MenuPage(page));
   },
   sesionEstandar: async ({ loginPage, inventoryPage }, use) => {
     await loginPage.navigate();
